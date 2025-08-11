@@ -1,26 +1,124 @@
 @import 'tailwindcss';
 
+/* Light theme (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  @theme {
+    /* Brand */
+    --color-primary: #4caf50; /* Leaf green – main CTA */
+    --color-primary-foreground: #ffffff;
+
+    --color-secondary: #c97b4a; /* Copper – secondary actions */
+    --color-secondary-foreground: #ffffff;
+
+    --color-accent: #86d19f; /* Fresh mint – subtle accents */
+    --color-accent-foreground: #0f1a12;
+
+    /* Surfaces & text */
+    --color-bg: #faf5f0; /* Page background (latte-tinted) */
+    --color-surface: #f4e1d2; /* Cards / panels (latte cream) */
+    --color-surface-2: #ead6c7; /* Hovered / raised surfaces */
+    --color-border: #d9c6b6; /* Dividers & input borders */
+
+    --color-fg: #1f2937; /* Primary text (near-slate-800) */
+    --color-fg-muted: #6b7280; /* Secondary text */
+
+    /* UI helpers */
+    --color-muted: #f6efe9; /* Muted backgrounds (inputs, tags) */
+    --color-highlight: #ffe08a; /* Highlights (offers, markers) */
+    --color-ring: #4caf50; /* Focus ring colour */
+
+    /* Feedback */
+    --color-success: #2fa66a;
+    --color-success-foreground: #ffffff;
+
+    --color-warning: #d97706;
+    --color-warning-foreground: #0b0b0b;
+
+    --color-danger: #dc3545;
+    --color-danger-foreground: #ffffff;
+
+    --color-info: #2ca3e2;
+    --color-info-foreground: #081318;
+
+    /* Text on inverted surfaces */
+    --color-inverted-bg: #0f1411;
+    --color-inverted-fg: #ffffff;
+
+    /* fonts -> creates `font-heading`, `font-body` utilities */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Dark theme override — toggle with <html data-theme='dark' > */
+/* :root[data-theme='dark'] {
+  @theme {
+    --color-bg: #0f1411;
+    --color-surface: #141a16;
+    --color-surface-2: #19201b;
+    --color-border: #2a332d;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-fg: #f3f4f6;
+    --color-fg-muted: #9aa3ad;
+
+    --color-primary: #4caf50;
+    --color-primary-foreground: #0a0f0a;
+
+    --color-secondary: #c97b4a;
+    --color-secondary-foreground: #0f0c0a;
+
+    --color-accent: #6ec690;
+    --color-accent-foreground: #08120c;
+
+    --color-muted: #111814;
+    --color-highlight: #f6c76e;
+    --color-ring: #4caf50;
+
+    --color-success: #37c37a;
+    --color-success-foreground: #06100b;
+
+    --color-warning: #f59e0b;
+    --color-warning-foreground: #0e0e0e;
+
+    --color-danger: #ef4444;
+    --color-danger-foreground: #0f0f0f;
+
+    --color-info: #38bdf8;
+    --color-info-foreground: #031721;
+
+    --color-inverted-bg: #f3f4f6;
+    --color-inverted-fg: #0f1411;
+
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
+} */
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+@utility btn {
+  @apply ring-ring ring-offset-bg inline-flex items-center justify-center rounded-2xl px-4 py-2 font-semibold ring-offset-2 transition-colors focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply bg-primary text-primary-foreground hover:brightness-110;
+}
+@utility btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:brightness-110;
+}
+@utility btn-outline {
+  @apply border-border text-fg hover:bg-surface-2 border;
 }

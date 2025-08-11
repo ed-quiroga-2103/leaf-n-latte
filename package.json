@@ -13,13 +13,16 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.7",
+    "clsx": "^2.1.1",
+    "headlessui": "^0.0.0",
     "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -31,7 +34,7 @@
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "simple-git-hooks": "^2.13.1",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.1.11",
     "typescript": "^5"
   },
   "lint-staged": {
