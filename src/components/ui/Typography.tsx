@@ -1,5 +1,6 @@
 // components/ui/Typography.tsx
 import * as React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const tagMap = { 1: 'h1', 2: 'h2', 3: 'h3', 4: 'h4', 5: 'h5', 6: 'h6' } as const;
 type HeadingLevel = keyof typeof tagMap;
@@ -22,9 +23,11 @@ export function Heading({ level = 2, className, children, ...props }: HeadingPro
   return React.createElement(
     Tag,
     {
-      className: ['font-heading font-semibold text-primary tracking-tight', sizes[level], className]
-        .filter(Boolean)
-        .join(' '),
+      className: twMerge(
+        ['font-heading font-semibold text-primary tracking-tight', sizes[level], className]
+          .filter(Boolean)
+          .join(' '),
+      ),
       ...props,
     },
     children,

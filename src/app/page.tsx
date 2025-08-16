@@ -8,7 +8,7 @@ import Landing from '@/components/blocks/Landing';
 
 export default function Home() {
   return (
-    <div className="bg-bg mt-4 flex min-h-screen flex-col items-center">
+    <div className="bg-primary flex min-h-screen w-full min-w-full flex-col items-center">
       <Landing />
     </div>
   );

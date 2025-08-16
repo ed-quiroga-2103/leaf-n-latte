@@ -14,8 +14,8 @@ import React from 'react';
 
 export default function Showcase() {
   return (
-    <div className="grid gap-6 p-6 md:grid-cols-3 md:gap-3">
-      {[0, 1, 2].map((_, index) => (
+    <div className="grid w-10/12 gap-6 p-6 md:grid-cols-3 md:gap-3">
+      {[0, 2].map((_, index) => (
         <Card key={index}>
           <CardHeader>
             <div className="mx-auto mb-4 flex justify-center">
@@ -23,10 +23,10 @@ export default function Showcase() {
                 src="https://images.pexels.com/photos/377903/pexels-photo-377903.jpeg"
                 alt="Latte"
                 responsiveSizes={{
-                  sm: 200,
-                  md: 200,
-                  lg: 250,
-                  xl: 250,
+                  sm: 250,
+                  md: 250,
+                  lg: 350,
+                  xl: 350,
                 }}
               />
             </div>
@@ -38,7 +38,7 @@ export default function Showcase() {
               A cosy blend that pairs beautifully with our house pastry selection.
             </Paragraph>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex flex-row-reverse items-center justify-between">
             <Button size="sm">Order Now</Button>
             <Button size="sm" variant="outline">
               View Menu

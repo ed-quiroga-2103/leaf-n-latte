@@ -4,45 +4,45 @@
 :root {
   @theme {
     /* Brand */
-    --color-primary: #4caf50; /* Leaf green – main CTA */
-    --color-primary-foreground: #ffffff;
+    --color-primary: #4b2e2b; /* Deep Coffee Brown – main CTA */
+    --color-primary-foreground: #f5e6d3; /* Creamy Beige for contrast */
 
-    --color-secondary: #c97b4a; /* Copper – secondary actions */
-    --color-secondary-foreground: #ffffff;
+    --color-secondary: #355e3b; /* Forest Green – secondary actions */
+    --color-secondary-foreground: #f5e6d3;
 
-    --color-accent: #86d19f; /* Fresh mint – subtle accents */
-    --color-accent-foreground: #0f1a12;
+    --color-accent: #a0522d; /* Terracotta – warm highlights */
+    --color-accent-foreground: #f5e6d3;
 
     /* Surfaces & text */
-    --color-bg: #faf5f0; /* Page background (latte-tinted) */
-    --color-surface: #f4e1d2; /* Cards / panels (latte cream) */
-    --color-surface-2: #ead6c7; /* Hovered / raised surfaces */
-    --color-border: #d9c6b6; /* Dividers & input borders */
+    --color-bg: #f5e6d3; /* Creamy Beige – page background */
+    --color-surface: #d2b48c; /* Warm Sand – cards / panels */
+    --color-surface-2: #708238; /* Olive Green – hovered / raised surfaces */
+    --color-border: #3c3c3c; /* Charcoal Gray – dividers & input borders */
 
-    --color-fg: #1f2937; /* Primary text (near-slate-800) */
-    --color-fg-muted: #6b7280; /* Secondary text */
+    --color-fg: #3c3c3c; /* Primary text */
+    --color-fg-muted: #708238; /* Muted text in Olive Green tone */
 
     /* UI helpers */
-    --color-muted: #f6efe9; /* Muted backgrounds (inputs, tags) */
-    --color-highlight: #ffe08a; /* Highlights (offers, markers) */
-    --color-ring: #4caf50; /* Focus ring colour */
+    --color-muted: #eadfcc; /* Softened beige for muted elements */
+    --color-highlight: #a0522d; /* Terracotta highlights (offers, markers) */
+    --color-ring: #355e3b; /* Forest Green focus ring */
 
     /* Feedback */
-    --color-success: #2fa66a;
-    --color-success-foreground: #ffffff;
+    --color-success: #355e3b; /* Use Forest Green as success indicator */
+    --color-success-foreground: #f5e6d3;
 
-    --color-warning: #d97706;
-    --color-warning-foreground: #0b0b0b;
+    --color-warning: #a0522d; /* Terracotta warning */
+    --color-warning-foreground: #f5e6d3;
 
-    --color-danger: #dc3545;
-    --color-danger-foreground: #ffffff;
+    --color-danger: #4b2e2b; /* Deep Coffee Brown as danger */
+    --color-danger-foreground: #f5e6d3;
 
-    --color-info: #2ca3e2;
-    --color-info-foreground: #081318;
+    --color-info: #708238; /* Olive Green for info */
+    --color-info-foreground: #f5e6d3;
 
     /* Text on inverted surfaces */
-    --color-inverted-bg: #0f1411;
-    --color-inverted-fg: #ffffff;
+    --color-inverted-bg: #3c3c3c; /* Charcoal background */
+    --color-inverted-fg: #f5e6d3; /* Creamy Beige text */
 
     /* fonts -> creates `font-heading`, `font-body` utilities */
     --font-heading: 'Poppins', sans-serif;
